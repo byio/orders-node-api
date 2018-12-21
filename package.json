@@ -1,0 +1,19 @@
+{
+  "name": "orders-node-api",
+  "version": "1.0.0",
+  "description": "API that handles orders",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint --ext .js ./"
+  },
+  "author": "byio",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.10.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  }
+}
