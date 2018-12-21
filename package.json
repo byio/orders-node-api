@@ -4,12 +4,14 @@
   "description": "API that handles orders",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon",
     "lint": "eslint --ext .js ./"
   },
   "author": "byio",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^5.10.0"
+    "eslint": "^5.10.0",
+    "nodemon": "^1.18.9"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
