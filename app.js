@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+// import routes
+const userRoutes = require('./api/routes/user');
+
 // morgan logger middleware
 app.use(
   morgan(
@@ -33,6 +36,9 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+// routes middleware
+app.use('/api/users', userRoutes);
 
 // general error handling
 app.use((req, res, next) => {
