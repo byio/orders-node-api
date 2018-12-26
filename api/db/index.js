@@ -10,5 +10,16 @@ const pool = new Pool({
 });
 
 module.exports = {
-  query: (text, params, cb) => pool.query(text, params, cb)
+  query: (text, params, cb) => {
+    const start = Date.now();
+    return pool.query(text, params, (err, res) => {
+      const duration = Date.now() - start;
+      console.log('executed query', {
+        text,
+        duration,
+        rows: res.rowCount
+      });
+      cb(err, res);
+    });
+  }
 };
